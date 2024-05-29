@@ -1,0 +1,58 @@
+/*Colocando o css em PT-BR*/
+@charset="UTF-8";
+
+body
+{
+    background:url(ubuntu4.jpg) no-repeat ; /*img para o fundo todo*/
+}
+
+table#tabela{
+    /*tabela ocupando 100% da pag*/
+    width: 100%;
+    height: 100%;
+    border: 2px solid black; /*Estilo da borda*/
+    border-spacing: 0px ; /* retirando os espaços entre as bordas*/
+    font-family: Georgia ;
+    text-align: center;
+    vertical-align: center;
+}
+
+td{
+    border: 1px solid black;
+    padding: 5px;
+}
+
+tr.green{
+    background-color: bisque;
+    font-family: Georgia;
+    font-weight: bold;
+    width: 292px;
+}
+
+
+
+/*td{
+    
+    font-family: Georgia;
+    font-size: 12pt;
+    font-weight: bold;
+}
+*/
+
+h1{
+    text-align: center;
+    font-family: Georgia;
+    color:rgb(7, 7, 7);
+}
+ 
+h3{
+    font-family: Georgia;
+    color: black;
+}
+
+
+tr img.pingu{
+    width: 80px;
+    height: 80px;
+}
+

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+
+<!-- Colocando em pt br  -->
+<html lang="pt-br">
+
+<head>
+    <!-- APESAR DE COLOCAR O PT BR UTF-8 É NECESSARIO POR PARAR OBTER MAIS APROXIMIDADE COM O PORTUGUÊS BRASIL -->
+    <meta charset="UTF-8"
+    <meta name="description" content="Aqui você encontra conteúdo refente a Linux..."/>
+    <!-- Palavras chaves para as pessoas encontrar nosso site -->
+    <meta name="keywords" content="Linux, Ubuntu, Opensusi..."/>
+
+    <!-- Exibindo o icon de guia da pagina -->
+    <link rel="icon" href="favicon.ico">
+    <!--Esta linha é usada em HTML para vincular uma folha de estilo CSS ao documento HTML.-->
+    <link rel="stylesheet" type="text/css" href="estilotabela.css"/>
+
+    <title>TABELA</title>
+</head>
+
+<body>
+
+    <table id="tabela">
+        <tr>
+            <td colspan="3"><h1>A história do Linux</h1></td>
+            <td><a target="_blank" href="https://www.ubuntu.com"><img class="pingu" src="tux4.png"></a></td>
+        </tr>
+        <!--Criando bordas da pagina-->
+        <tr class="green">
+            <td><a target="_blank" href="https://www.ubuntu.com">UBUNTU</a></td>
+            <!--Cirando o menu de navegação-->
+            <td><a target="_blank" href="https://get.opensuse.org/pt_BR/">Open Suse</a></td>
+            <td><a target="_blank" href="https://www.redhat.com/pt-br">Red Hat</a></td>
+            <td><a target="_blank" href="https://www.debian.org/">Debian</a></td>
+        </tr>
+
+        <tr>
+            <!--linha vazia-->
+            <td colspan="4"></br> </td>
+        </tr>
+
+        <tr>
+            <td colspan="3" rowspan="4"><img src="ubuntu.png"></td>
+            <td><h3>Ubuntu</h3></td>
+        </tr>
+
+        <tr>
+            <td><h3>Red Hat</h3></td>
+        </tr>
+
+        <tr>
+            <td><h3>OpenSuse</h3></td>
+        </tr>
+
+        <tr>
+            <td><h3>Debian</h3></td>
+        </tr>
+
+        <tr>
+            <!--Novamente na cor da borda da tabela-->
+            <td class="ouro" colspan="4"></br></td>
+        </tr>
+        
+        <!--Cor do fundo da cabela-->
+        <tr class="green">
+            <td colspan="4">RODAPÉ</td>          
+        </tr>
+
+        <tr>
+            <td class="ouro" colspan="4">Desenvolvido para o curso livre</td>
+        </tr>
+    </table>
+</body>
+</html>
+
+<!--
+    <table></table> começar e terminar uma tabela
+
+    <tr> </tr> table rows = linha da tabela 
+    <td> </td> table data = délula da tabela (onde fica o conteudo dos dados)
+    tr a gente cria a linha e td é onde a gente bota os conteudos da linha
+
+    SOMENTE PARA A TAG TD
+    colspan é abreviação de column span - expansão da coluna, é usada na tag td para indicar
+    a quantidade de celulas que vão existir em uma linha da tabela 
+    
+    rownpan - é a expansão da linha... especificar a quantidade de linhas que será quantidada em uma celula
+    
+-->

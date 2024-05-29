@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Aqui você vai encontrar...">
+    <meta name="keywords" content="jogos, vídeo game, consoles, xbox, playstation, nintendo">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+ 
+    <title>Games</title>
+    <link rel="icon" href="img/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+ 
+<body>
+<div id="interface">
+<header id="topo">
+<img src="img/logo.png" title="Logo" alt="Logo Game Over">
+ 
+<nav id="menu">
+    <ul>
+        <li><a href="contatos.html">Contatos</a></li>
+        <li><a href="fotos.html">Fotos</a></li>
+        <li><a href="videos.html">Vídeos</a></li>
+    </ul>
+</nav>
+</header>
+ 
+<div id="banner-anime">
+    <img id="anime1" src="img/banner1.jpg" alt="Jogo God of war" title="kratos">
+    <img id="anime2" src="img/banner2.jpg" alt="Jogo God of war" title="kratos">
+</div>
+ 
+<h1> Entre em contato </h1>
+ 
+<form method="post" id="contato" action="chrisdomingos04@gmail.com"></form>
+    <fieldset id="usuario">
+        <legend>Identificação do usuário</legend>
+ 
+        <p>
+            <label for="cnome">Nome:</label>
+            <input type="text" name="nome" id="cnome" size="30" maxlength="50" placeholder="Nome Completo" required autofocus/>
+        </p>
+ 
+        <p>
+            <label for="cmail">E-mail:</label>
+            <input type="email" name="mail" id="cmail" size="30" maxlength="50" placeholder="Seu e-mail" required />
+        </p>
+ 
+        <p>
+            <label for="csenha">Senha:</label>
+            <input type="password" name="senha" id="csenha" size="8" maxlength="8" placeholder="8 digitos" required/>
+        </p>
+ 
+        <fieldset id="sexo"
+        <legend>Sexo</legend>
+       
+        <p>
+            <input type="radio" name="sexo" id="cmasc" checked />
+            <label for="cmasc">Masculino</label>
+        </p>
+ 
+        <p>
+            <input type="radio" name="sexo" id="cfem" />
+            <label for="cfem">Feminino</label>
+        </p>
+ 
+        <p>
+            <input type="radio" name="sexo" id="cout" />
+            <label for="cout">Outros</label>
+        </p>
+    </fieldset>
+    <p>
+        <label for="cnasc">Data de Nascimento</label>
+        <input type="date" name="nasc" id="cnasc"/>
+    </p>
+    </fieldset>
+ 
+    <fieldset id="endereco">
+        <legend>Endereço de Usuário</legend>
+ 
+        <p>
+            <label form="crua">Logradouro</label>
+            <input type="text" name="rua" id="crua" size="50" maxlength="50" placeholder="Rua, Av, Trav..."/>
+        </p>
+        <p>
+            <label form="cnum">Número:</label>
+            <input type="number" name="num" id="cnum" min="0" max="99999"/>
+        </p>
+ 
+        <p>
+            <label for="cest">Estado</label>
+ 
+                <select name="est" id="cest">
+ 
+                    <optgroup label="Região Sudeste">
+                        <option value="SP">São Paulo</option>
+                        <option value="RJ">Rio de Janeiro</option>
+                        <option value="MG">Minas Gerais</option>
+                        <option value="ES">Espírito Santo</option>
+                    </optgroup>
+                    <optgroup label="Região Sul">
+                        <option value="SC">Santa Catarina</option>
+                        <option value="PR">Paraná</option>
+                        <option value="RS">Rio Grande do Sul</option>
+                    </optgroup>
+                </select>
+        </p>
+        <p>
+            <label for="ccid">Cidade:</label>
+            <input type="text" name="cid" id="ccid" size="40" maxlength="40" placeholder="Sua Cidade"/>
+        </p>
+    </fieldset>
+ 
+    <fieldset id="mensagem">
+        <legend>Mensagem do Usuário</legend>
+ 
+        <p>
+            <label for="curg">Grau de Urgência</label>
+            Min<input type="range" name="urg" id="curg" min="0" max="10" step="1"/>Máx
+        </p>
+ 
+        <p>
+            <label for="msg">Mensagem:</label>
+        </p>
+ 
+        <p>
+            <textarea name="msg" id="cmsg" cols="70" rows="7" placeholder="Digite sua mensagem..."></textarea>
+        </p>
+    </fieldset>
+ 
+    <fieldset id="pedido">
+        <legend>Quero um Console:</legend>
+        <p><input type="checkbox" name="tPed" id="cPed" checked>
+        <label for="cPed">Gostaria de adquirir um Console quando disponível</label></p>
+ 
+        <p> <label for="cCon">Console</label>
+            <select name="tGame" id="cGame">
+                <option value="PS">PlayStation</option>
+                <option value="Xbox">Xbox</option>
+                <option value="Wii">Nintendo</option>
+            </select>
+        </p>
+ 
+        <p>
+            <label for="cCor">Cor</label>
+            <input type="color" name="tCor" id="cCor" value="#0000FF"/>
+        </p>
+        <p>
+            <label for="cQtd">Quantidade:</label>
+            <input type="number" name="tQtd" id="cQtd" min="0" max="5" value="0" oninput="calc_total();">
+        </p>
+ 
+        <p>
+            <label for="tTot">Preço Total:</label>
+            <input type="text" name="tTot" id="cTot" placeholder="Total a Pagar" readonly/>
+        </p>
+ 
+    </fieldset>
+ 
+<button type="submit" name="enviar" class="btn">Enviar</button>
+<button type="reset" name="limpar" class="btn">Limpar</button>
+ 
+ 
+</form>
+ 
+<footer id="rodape">
+    <p>Desenvolvido por Maysa Arruda</p>
+    <p>
+        <a target="_blank" href="https://www.facebook.com/"><img class="rede_social" src="img/logo-face.png"></a>
+        <a target="_blank" href="https://www.twitter.com/"><img class="rede_social" src="img/logo-twitter.png"></a>
+        <a target="_blank" href="https://www.instagram.com/"><img class="rede_social" src="img/logo-instagram.png"></a>
+    </p>
+</footer>
+ 
+</div>
+ 
+</body>
+</html>

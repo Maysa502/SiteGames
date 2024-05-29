@@ -1,0 +1,354 @@
+@charset "UTF-8";
+ 
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,400;0,700;1,300&display=swap');
+ 
+@font-face{
+    font-family: logo;
+    src: url(fontes/bubblegum-sans-regular.otf) format('opentype');
+    font-weight: normal;
+}
+ 
+*{ /*configuração global tira todas as margin, padding e border de todos os elementos*/
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+ 
+/* VÁRIAVEL EM CSS - escolher as cores que serão trabalhadas no projeto
+#c5ebd6 #8321ad #3ddc84 #2fa866 #1a5c37 #063d1e
+ 
+Criar o pseudo root - que é a raiz da árvore do nosso documento, tudo que for inserindo dentro do root
+vai servir para o documento todo, então podemos criar variáveis dentro do :root.
+No CSS as variáveis começam com -- e depois seguido do nome da variável.*/
+ 
+:root{
+    --cor1: #c5ebd6;
+    --cor2: #8321ad;
+    --cor3: #3ddc84;
+    --cor4: #2fa866;
+    --cor5: #1a5c37;
+    --cor6: #063d1e;
+ 
+    --fonte-padrao: arial, verdana, sans-serif; /* fontes que eu escolhi */
+    --fonte-texto: 'Josefin Sans', sans-serif; /* fonte do google*/
+    --fonte-titulo: 'logo', 'cursiva'; /*fonte que baixamos*/
+ 
+    --fontsize-texto: 1.2em;
+    --fontsize-titulo: 3em;
+ 
+    --margem-sup-inf: 30px; /*margem para os títulos*/
+}
+ 
+body{
+    background: var(--cor1);
+}
+ 
+#interface{
+    background: #fff;
+    max-width: 1200px;
+    margin: 0px auto;
+}
+ 
+#topo{
+    height: 70px;
+}
+ 
+#topo img{ /*para sobrepor uma imagem a outra*/
+    margin: 10px 20px;
+    position: absolute;
+    z-index: 5;
+}
+ 
+#menu{
+    display: block;
+    position: absolute;
+    width: 800px;
+    top: 20px;
+    left: 950px;
+}
+ 
+#menu ul{
+    list-style: none;
+    font: 1.2em verdana;
+    margin: 0px;
+    padding: 0px;
+}
+ 
+#menu li{
+    float: left;
+}
+ 
+#menu li a{
+    color: #4c4b4b;
+    text-decoration: none;
+    margin: 0px;
+    padding: 5px 25px;
+    display: block;
+}
+ 
+#menu li a:hover{
+    color:#109eea;
+    text-decoration: underline;
+}
+ 
+/* Banner*/
+#anime1, #anime2{
+    max-width: 100%;
+    height: auto;
+}
+ 
+#banner-anime{
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    height: 350px;
+    margin: 0px;
+}
+ 
+#banner-anime img{
+    position: absolute;
+    transition-property: opacity;
+    transition-duration: 1s;
+    transition-timing-function: linear;
+}
+ 
+#anime1, #banner-anime:hover #anime2{
+    opacity: 1;
+}
+ 
+#banner-anime:hover #anime1, #banner-anime #anime2{
+    opacity: 0;
+}
+ 
+h1{
+    font-family: var(--fonte-titulo); /*aqui formatei a fonte do titulo*/
+    font-size: var(--fontsize-titulo);/*aqui eu formatei o tamanho da fonte*/
+    text-align: center; /* alinhar o texto pela largura da linha*/
+    margin: var(--margem-sup-inf); /*alinha o texto pela altura da linha*/
+    color: var(--cor4);
+}
+
+/*Formulario*/
+
+form{
+    width: 1000px; /*width determina a largura da area*/
+    margin: auto;
+    font-family: var(--fonte-texto);
+    font-size: 1.2em; /*1.2em vai aumentar a fonte em 20% em relação ao seu tamanho original*/
+}
+
+input, textarea, select{
+    font-size: 0.9em;
+    background: whitesmoke;
+    border-radius: 5px; /*bolder radius cria uma borda com cantos arredondados*/
+    padding: 5px ;/*denone a distancia do conteudo da borda entre as suas bordas*/
+}
+cor{
+    background: none;
+    padding: 0;
+}
+legend{
+    color: #4c4b4b;
+    font-family: logo;
+    font-size: 1.5em; /*fonte um pouco maior q seu tamanho original*/
+}
+fieldset{
+    border: 1px solid olive;
+    padding: 15px;
+    margin-left: 1px;
+}
+fieldset#sexo{
+    width: 250px;
+}
+#contato p{
+    padding: 5px;
+}
+#usuario{
+    background: url("img/icontato.png") no-repeat 95% 95% ;
+}
+#endereco{
+    background: url("img/iendereco.png") no-repeat 95% 95% ;
+}
+#mensagem{
+    background: url("img/imensagem.png") no-repeat 95% 95%;
+}
+#pedido{
+    background: url("img/ipgto.png") no-repeat 95% 95%;
+}
+.btn{
+    background: #063d1e;
+    color: whitesmoke;
+    font-size: 1.1em;
+    padding: 7px;
+    margin: 10px 5px 15px;
+    border-radius: 10px; /*arredondou as bordas do botão*/
+}
+
+/*Rodapé*/
+
+#rodape p{
+    text-align: center;
+    color: #4c4b4b;
+    font-family: Verdana;
+    font-size: 1.3em;
+    margin: 10px 5px ;
+}
+
+/*Pagina de fotos*/ 
+
+#galeria1 p{
+    font-family: var(--fonte-texto);
+    font-size: var(--fonte-texto);
+    padding: 5px 15px;
+}
+
+#album-fotos{
+    width: 690px;
+    margin: 0 auto;
+}
+#album-fotos li{
+    float: left; /*float para posicionar as imahens*/
+    width: 190px; /*largura da imagem*/
+    height: 200px;/*altura da imagem*/
+    margin: 10px;
+    border: 3px solid olive; 
+    background: #fff;
+    -webkit-transition: all .4s ease-in;
+}
+#album-fotos li span.galeria{
+    opacity: 0; /*definir transparencia*/
+    opacity: #fff;
+    background: rgba(0,0,0,0.5); /*a 'cor' alpha é o responsavel por definir as transparencia as cores (0 totalmente trnsparente e 1 fica opaco)*/
+    font: 0.9em verdana;
+    line-height: 370px;
+    padding: 5px;
+}
+#album-fotos li:hover span.galeria{
+    opacity: 1;
+}
+#album-fotos li:hover{
+    -webkit-transform: scale(1.5); /*aumenta o zoom da img*/
+}
+
+#album-fotos li.foto01{
+    background: url("img/galeria1.jpg") no-repeat;
+    background-position: 50% 50%;
+    background-size: 700px 500px;
+}
+#album-fotos li.foto01:hover{
+    background-position: 0% 0%; /*ap passar o mouse enquadrar a img para depois aumentar*/
+    background-size: 200px 200px;
+}
+
+
+#album-fotos li.foto02{
+    background: url("img/galeria2.jpg") no-repeat;
+    background-position: 50% 50%;
+    background-size: 700px 500px;
+}
+#album-fotos li.foto02:hover{
+    background-position: 0% 0%; /*ap passar o mouse enquadrar a img para depois aumentar*/
+    background-size: 200px 200px;
+}
+
+
+#album-fotos li.foto03{
+    background: url("img/galeria3.jpg") no-repeat;
+    background-position: 50% 50%;
+    background-size: 700px 500px;
+}
+#album-fotos li.foto03:hover{
+    background-position: 0% 0%; /*ap passar o mouse enquadrar a img para depois aumentar*/
+    background-size: 200px 200px;
+}
+
+
+#album-fotos li.foto04{
+    background: url("img/galeria4.jpg") no-repeat;
+    background-position: 50% 50%;
+    background-size: 700px 500px;
+}
+#album-fotos li.foto04:hover{
+    background-position: 0% 0%; /*ap passar o mouse enquadrar a img para depois aumentar*/
+    background-size: 200px 200px;
+}
+
+
+#album-fotos li.foto05{
+    background: url("img/galeria5.jpg") no-repeat;
+    background-position: 50% 50%;
+    background-size: 700px 500px;
+}
+
+#album-fotos li.foto05:hover{
+    background-position: 0% 0%; /*ap passar o mouse enquadrar a img para depois aumentar*/
+    background-size: 200px 200px;
+}
+
+#album-fotos li.foto06{
+    background: url("img/galeria6.jpg") no-repeat;
+    background-position: 50% 50%;
+    background-size: 700px 500px;
+}
+
+#album-fotos li.foto06:hover{
+    background-position: 0% 0%; /*ap passar o mouse enquadrar a img para depois aumentar*/
+    background-size: 200px 200px;
+}
+
+/* Segunda transição*/ 
+
+#galeria2{
+    width: 800px;
+    height: 480px;
+    margin: 0px auto;
+}
+#galeria-fotos{
+    list-style: none;
+    margin: 0 auto;
+}
+#galeria-foto li{
+    display: block;
+    float: left;
+    margin: 3px;
+    position: relative;
+}
+#galeria-foto img{
+    background: #585857;
+    padding: 5px;
+    width: 200px;
+    height: 165px;
+}
+
+.aumentar:hover{
+    -webkit-transform: scale(1.5);
+    z-index: 5;/*ele determina qual elemento ficará por cima de qual (sobreposição)*/
+    -moz-transform: scale(1.5); /*faz uma rotação no sentido horario*/
+    transform: scale(1.5);
+}
+
+/*Pagina de video*/
+
+#radio-tv{
+    width: 75%;
+    height: 580px;
+    background: url(img/radio-tv.png)no-repeat;
+    margin: 5px auto 5px auto;
+}
+ 
+audio#musica{
+    display: block;
+    position: relative;
+    width:33%;
+    top: 500px;
+    left: 575px;
+}
+ 
+video#filme{
+    display: block;
+    position: relative;
+    width: 49%;
+    top: 50px;
+    left: 90px;
+}
+ 
